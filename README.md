@@ -43,6 +43,24 @@ Ideal for students, educators, and content creators who want to convert study ma
 
 ---
 
+## Screenshots
+
+### 1) Main UI
+<img width="959" height="426" alt="azure quiz app pic4" src="https://github.com/user-attachments/assets/8bf50b5e-21bc-4e14-9844-091e45cd45cd" />
+
+### 2) Text Extracted
+<img width="958" height="435" alt="azurequiz 1 pic" src="https://github.com/user-attachments/assets/79da4ea9-b839-4bc2-86a2-381e744bdbbe" />
+
+### 3) Questions generated
+<img width="959" height="433" alt="azure quiz app pic2" src="https://github.com/user-attachments/assets/b66742e2-33ef-45c1-a119-24428c518fce" />
+
+### 4) Options to choose the type of questions
+<img width="953" height="290" alt="azure quiz pic 5" src="https://github.com/user-attachments/assets/6b66726e-adec-44c6-b813-ca33c127ac60" />
+
+
+---
+
+
 ## 🧑‍💻 Setup Instructions
 
 ### 1. 🔧 Prerequisites
