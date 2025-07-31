@@ -1,7 +1,0 @@
-streamlit==1.32.2
-python-dotenv==1.0.1
-openai==1.13.3
-requests==2.31.0
-azure-ai-formrecognizer==3.3.2
-PyMuPDF==1.23.6
-
