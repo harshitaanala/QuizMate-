@@ -70,7 +70,7 @@ def generate_questions(text, qtype="MCQ", num_questions=3):
     """
     prompt_map = {
         "MCQ": f"Generate {num_questions} multiple choice questions with 4 options each and indicate the correct answer. Base your questions strictly on the following text:\n\n",
-        "True/False": f"Generate {num_questions} true or false questions. Base your questions strictly on the following text:\n\n",
+        "True/False": f"Generate {num_questions} true or false questions and indicate the correct answer. Base your questions strictly on the following text:\n\n",
         "Fill in the Blanks": f"Generate {num_questions} fill-in-the-blank questions. Base your questions strictly on the following text:\n\n",
         "Short Answer": f"Generate {num_questions} short answer questions (1-2 lines). Base your questions strictly on the following text:\n\n"
     }
