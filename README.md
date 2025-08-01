@@ -1,4 +1,4 @@
-# QuizMate-Azure 🧠☁️  
+# QuizMate 🧠☁️  
 Your AI-powered question generator from PDFs, built with Streamlit and Azure Cognitive Services. Upload any PDF document—whether it’s an academic paper, textbook, or corporate report—and get intelligently crafted quiz questions like MCQs, True/False, Fill-in-the-blanks, and Short Answer Questions, powered by Azure OpenAI. This tool eliminates the manual effort of reading and framing questions, making it ideal for educators, students, and professionals preparing learning material.
 
 You can checkout the live application here : https://q4snfhavtjtvraxtwfl6my.streamlit.app/
@@ -8,7 +8,7 @@ You can checkout the live application here : https://q4snfhavtjtvraxtwfl6my.stre
 
 ## 💡 About the Project
 
-**QuizMate-Azure** is a lightweight web app that:
+**QuizMate** is a lightweight web app that:
 - 📄 Takes a **PDF** file as input
 - 📚 Extracts **text** from the document
 - 🤖 Uses **Azure AI (Text Analytics)** to analyze the content
@@ -76,4 +76,4 @@ Ideal for students, educators, and content creators who want to convert study ma
 
 ```bash
 git clone https://github.com/your-username/QuizMate-Azure.git
-cd QuizMate-Azure
+cd QuizMate
