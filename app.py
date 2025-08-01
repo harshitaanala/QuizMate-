@@ -2,7 +2,7 @@ import streamlit as st
 from utils import extract_text_from_pdf, generate_questions
 
 st.set_page_config(page_title="Azure PDF Quiz Generator", layout="wide")
-st.title("📘 PDF to Quiz Generator using Azure AI")
+st.title("📘 QuizMate")
 
 # Upload PDF
 uploaded_file = st.file_uploader("📤 Upload a PDF file", type="pdf")
