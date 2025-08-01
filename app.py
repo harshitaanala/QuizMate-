@@ -4,17 +4,17 @@ from utils import extract_text_from_pdf, generate_questions
 st.set_page_config(page_title="Azure PDF Quiz Generator", layout="wide")
 st.title("📘 QuizMate")
 
-# Upload PDF
+
 uploaded_file = st.file_uploader("📤 Upload a PDF file", type="pdf")
 
-# Session variables
+
 if 'extracted_text' not in st.session_state:
     st.session_state.extracted_text = None
 
 if uploaded_file:
     pdf_bytes = uploaded_file.read()
 
-    # Extract Text Section
+    
     st.subheader("📄 Text Extraction")
     if st.button("🔍 Extract Text from PDF"):
         try:
@@ -27,7 +27,7 @@ if uploaded_file:
         with st.expander("🔎 View Extracted Text"):
             st.write(st.session_state.extracted_text)
 
-    # Question Generation Section
+   
     st.subheader("❓ Question Generator")
     if st.button("🧩 Generate Questions"):
         st.session_state.show_q_options = True
@@ -50,11 +50,11 @@ if uploaded_file:
                     questions = generate_questions(source_text, qtype, num_questions)
                     st.success("✅ Questions generated successfully!")
                     
-                    # Format output nicely
+                    
                     st.markdown(f"### 📚 {qtype} Questions ({num_questions})")
                     
                     if qtype == "MCQ":
-                        # Split questions and format with line breaks for options
+                       
                         q_list = questions.split('\n\n')
                         for i, q in enumerate(q_list, 1):
                             q_lines = q.split('\n')
@@ -66,7 +66,7 @@ if uploaded_file:
                                     else:
                                         st.markdown(line)
                     else:
-                        # Format other question types normally
+                        
                         st.markdown(questions.replace('\n', '\n\n'))
                         
                 except Exception as e:
