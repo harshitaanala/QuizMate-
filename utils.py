@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Load all keys and endpoints
+
 FORM_KEY = os.getenv("AZURE_FORM_KEY")
 FORM_ENDPOINT = os.getenv("AZURE_FORM_ENDPOINT")
 OPENAI_KEY = os.getenv("AZURE_OPENAI_KEY")
@@ -44,14 +44,14 @@ def extract_text_from_pdf(pdf_file):
                 current_paragraph = []
                 for line in page["lines"]:
                     current_paragraph.append(line["content"])
-                    # If line ends with a period, assume paragraph end
+                    
                     if line["content"].strip().endswith('.'):
                         structured_text.append(" ".join(current_paragraph))
                         current_paragraph = []
-                # Add remaining content if any
+                
                 if current_paragraph:
                     structured_text.append(" ".join(current_paragraph))
-            return "\n\n".join(structured_text)  # Double newline for paragraphs
+            return "\n\n".join(structured_text)  
         time.sleep(2)
 
     raise Exception("Form Recognizer did not return result in time.")
@@ -78,7 +78,7 @@ def generate_questions(text, qtype="MCQ", num_questions=3):
     if qtype not in prompt_map:
         raise ValueError(f"Invalid question type. Supported types: {list(prompt_map.keys())}")
 
-    # Truncate text if too long to avoid token limits
+   
     MAX_TEXT_LENGTH = 3000  # characters
     if len(text) > MAX_TEXT_LENGTH:
         text = text[:MAX_TEXT_LENGTH]
@@ -100,7 +100,7 @@ def generate_questions(text, qtype="MCQ", num_questions=3):
         "top_p": 1,
         "frequency_penalty": 0,
         "presence_penalty": 0,
-        "max_tokens": 800  # Increase tokens for potentially longer outputs
+        "max_tokens": 800 
     }
 
     url = f"{OPENAI_ENDPOINT}/openai/deployments/{OPENAI_DEPLOYMENT_NAME}/chat/completions?api-version={OPENAI_API_VERSION}"
